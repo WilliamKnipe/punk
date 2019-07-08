@@ -1,6 +1,7 @@
 
 class Punk{
     constructor(){
+        this.beerData = [];
         this.init();
     }
     async init() {
@@ -16,11 +17,17 @@ class Punk{
         .then(data => {
             let obj = (data);
             console.log(obj);
-            // this.createGlobalTurtleArray(obj); // Create Punk components
+            this.createBeers(obj); // Create Punk components
             //Should only calculate page split if there is a change.
         })
         .catch(err => {
             console.log(err);
+        });
+    }
+    createBeers(beers){
+        beers.map((beer, index) => {
+            this.beerData = [...this.beerData, beer];
+            console.log(this.beerData[index].name);
         });
     }
 }
