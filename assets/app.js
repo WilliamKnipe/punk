@@ -2,7 +2,11 @@
 class Punk{
     constructor(){
         this.beerData = [];
-        this.page = document.getElementById('beer-section');
+        this.page = document.getElementById('beer-directory');
+        this.title = document.getElementById('beer-title');
+        this.image = document.getElementById('beer-image');
+        this.description = document.getElementById('beer-description');
+
         this.init();
     }
     async init() {
@@ -29,17 +33,23 @@ class Punk{
         beers.map((beer, index) => {
             this.beerData = [...this.beerData, beer];
             this.createCards(beer);
-            console.log(beer.name);
         });
     }
     createCards(beer){
         let card = document.createElement('div');
-        card.className = "beer-card";
         card.innerHTML = beer.name;
+        card.className = "beer-card";
+        card.id = beer.id;
         this.page.appendChild(card);
+        document.getElementById(beer.id).addEventListener( "click", ()=> this.updateInformation(beer));
+    }
+    updateInformation(beer){
+        console.log("click");
+        this.description.innerHTML = beer.description;
+        this.title.innerHTML = beer.name;
+        this.image.src = beer.image_url;
     }
 }
-
 
 let beer = new Punk();
 

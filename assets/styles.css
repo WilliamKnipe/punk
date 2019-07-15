@@ -2,29 +2,43 @@
 
 body{
     font-family: 'Oswald', sans-serif;
+    width: 100%;
+    display: flex;
+    margin: 0px;
+    overflow-x: hidden;
 }
 h1{
     text-align: center;
     text-decoration: underline;
 }
-#beer-section{
-    max-width: 1200px;
-    left: 0;
+#beer-directory{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+#beer-information{
+    width: 50%;
+    position: fixed;
+    height: 100vh;
+    top: 0;
     right: 0;
-    display: block;
-    margin: auto;
+}
+.information-container{
+    padding: 20px;
 }
 .beer-card{
-    padding: 10px;
+    padding: 20px;
     margin: 10px;
     border: 1px solid black;
+    display: flex;
 }
-.beer-card h2{
+.beer-information img{
+    height: 250px;
+    width: auto;
+}
+.beer-information h2{
     font-size: 24px;
     font-weight: 700;
     text-decoration: underline;
-}
-.beer-card img{
-    width: 100px;
-    height: auto;
+    text-align: center;
 }
