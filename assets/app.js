@@ -4,7 +4,8 @@ class Punk{
         this.beerData = [];
         this.page = document.getElementById('beer-directory');
         this.title = document.getElementById('beer-title');
-        this.image = document.getElementById('beer-image');
+        this.tagline = document.getElementById('tagline');
+        this.abv = document.getElementById('abv');
         this.description = document.getElementById('beer-description');
 
         this.init();
@@ -47,7 +48,8 @@ class Punk{
         console.log("click");
         this.description.innerHTML = beer.description;
         this.title.innerHTML = beer.name;
-        this.image.src = beer.image_url;
+        this.abv.innerHTML = beer.abv;
+        this.tagline.innerHTML = beer.tagline;
     }
 }
 
