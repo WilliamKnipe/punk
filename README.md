@@ -1,7 +1,7 @@
 # PUNK API
 
-Project uses HTML, CSS, Vanilla JavaScript (async fetch api). Doesn't require setup, simply runs in the browser.
+Demo uses HTML, CSS, Vanilla JavaScript (async fetch api). Doesn't require setup, simply open the index file in the browser.
 
-Very simple project messing around with Punk API
+Very simple project that uses Punk API.
 
-Didn't build it to be mobile first so it isn't responsive, maybe that is something I will add in later when I have a spare five minutes.
+Just a quick demo, didn't build it mobile first (I am a disgrace).
