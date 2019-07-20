@@ -14,9 +14,7 @@ class Punk{
         await this.getAPIData();
     }
     async getAPIData() {
-        //await fetch('/my-dashboard/user-targets/TurtleStats?authkey=situtestturtle', 
         await fetch('https://api.punkapi.com/v2/beers')
-        //await fetch('turtledata.php')
         .then(response => {
             return response.json();
         })
@@ -24,7 +22,6 @@ class Punk{
             let obj = (data);
             console.log(obj);
             this.createBeers(obj); // Create Punk components
-            //Should only calculate page split if there is a change.
         })
         .catch(err => {
             console.log(err);
